@@ -1,0 +1,14 @@
+{
+  "name": "scriptivox",
+  "owner": {
+    "name": "Scriptivox",
+    "email": "support@scriptivox.com"
+  },
+  "plugins": [
+    {
+      "name": "scriptivox",
+      "source": "./",
+      "description": "Transcribe meetings, podcasts and videos with Scriptivox, then write minutes, show notes and subtitles from them."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "scriptivox": {
+      "type": "http",
+      "url": "https://platform.scriptivox.com/mcp/directory"
+    }
+  }
+}
