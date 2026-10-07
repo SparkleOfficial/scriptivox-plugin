@@ -23,7 +23,7 @@
       "interface": {
         "displayName": "Scriptivox",
         "shortDescription": "Transcribe audio and video",
-        "longDescription": "Transcribe meetings, interviews, podcasts and videos into accurate text with speaker labels and timestamps, in 119 languages. Paste a YouTube, Google Drive or Dropbox link, drop a file, or send a bot to record a Zoom, Meet or Teams call. Then turn the transcript into minutes with action items, podcast show notes with chapters, or SRT and VTT subtitles you can edit right in the chat. Uses your own Scriptivox account and plan; it cannot buy anything for you.",
+        "longDescription": "Transcribe meetings, interviews, podcasts and videos into accurate text with speaker labels and timestamps, in 119 languages. Paste a Google Drive or Dropbox link, drop a file, or send a bot to record a Zoom, Meet or Teams call. Then turn the transcript into minutes with action items, podcast show notes with chapters, or SRT and VTT subtitles you can edit right in the chat. Uses your own Scriptivox account and plan; it cannot buy anything for you.",
         "developerName": "Scriptivox",
         "category": "Productivity",
         "capabilities": [

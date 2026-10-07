@@ -7,7 +7,7 @@ description: Make SRT or WebVTT subtitles for a video with Scriptivox, check and
 
 ## Make them
 
-1. Transcribe the video: `transcribe_url` for a link, `upload_file` for a file on their computer. Pass `language` when you know the spoken language — auto-detection can translate instead of transcribe when it guesses wrong.
+1. Transcribe the video: `transcribe_url` for a link, `transcribe_file` for a file attached in the chat (ChatGPT), `upload_file` for a file on their computer. Pass `language` when you know the spoken language — auto-detection can translate instead of transcribe when it guesses wrong.
 2. Check `transcribe_status` about once a minute until `completed`.
 3. Open `edit_subtitles` with the `transcription_id`. The person can fix wording and timing there and download SRT or VTT. It also returns the SRT text. For shorter lines on screen, pass `max_words` (8 is a good default; 4–5 for vertical video).
 4. For a file as text instead, `export_transcript` with `format: "srt"` or `"vtt"`.

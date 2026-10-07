@@ -7,9 +7,10 @@ description: Write podcast or video show notes — title ideas, a summary, chapt
 
 ## Get the transcript
 
-- **A YouTube, Google Drive or Dropbox link**: `transcribe_url` with `diarize: true` for interviews (`false` for a solo episode). Pass `language` when you know it.
+- **A Google Drive or Dropbox link**: `transcribe_url` with `diarize: true` for interviews (`false` for a solo episode). Pass `language` when you know it.
+- **A file attached in the chat** (ChatGPT): `transcribe_file`, with the same `diarize` choice.
 - **A local file**: `upload_file`, then wait for the person to drop it.
-- **Already transcribed**: `search_transcripts`.
+- **Already transcribed**: `search_transcripts` (by name or date) or `find_in_transcripts` (by what was said).
 
 Check `transcribe_status` about once a minute until `completed`, then read every page of `get_transcript` (`start_segment` → `next_segment`).
 

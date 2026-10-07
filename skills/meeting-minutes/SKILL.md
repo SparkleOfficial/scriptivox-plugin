@@ -9,10 +9,13 @@ description: Turn a recorded meeting into minutes — summary, decisions, and ac
 
 Pick the route that matches what the person has:
 
-- **A link** (Google Drive, Dropbox, YouTube): call `transcribe_url` with `diarize: true` so speakers are labelled. It returns a `transcription_id` at once.
+- **A link** (Google Drive, Dropbox): call `transcribe_url` with `diarize: true` so speakers are labelled. It returns a `transcription_id` at once.
+- **A file already attached in the chat** (ChatGPT): call `transcribe_file` with that file and `diarize: true`.
 - **A file on their computer**: call `upload_file` with `diarize: true`. An upload box appears in the chat; wait for them to drop the file.
 - **A call that has not happened yet**: call `open_meeting_bot`, or `start_meeting_bot` with the meeting link once they confirm (it needs `confirm: true`). The transcript arrives after the call ends; find it later with `search_transcripts`.
-- **Already in their library**: call `search_transcripts` to find it.
+- **Speakers still labelled SPEAKER_00, SPEAKER_01**: work out who is who from the text, confirm with the person, then `rename_speakers` so the minutes and the transcript both carry real names.
+- **A misheard name or term** ("it's Priya, not Prya"): `edit_transcript` with `replace`.
+- **Already in their library**: call `search_transcripts` to find it by name or date, or `find_in_transcripts` when they describe what was said ("the call where we discussed pricing").
 
 While a transcription runs, check `transcribe_status` about once a minute. Do not poll faster. When it is `completed`, read it with `get_transcript`. Long transcripts come in pages: keep calling with `start_segment` set to the `next_segment` it returns until there is none.
 
@@ -26,6 +29,17 @@ Use this structure, in the language of the meeting:
 4. **Open questions** — what was raised and left unresolved.
 
 Quote a short line with its timestamp (`[12:04]`) when a decision or owner could be disputed.
+
+## Sending the minutes to attendees
+
+Only when the person asks for it:
+
+1. A meeting that just ended: find it with `search_transcripts` (source `meeting`, newest first). If it is still being transcribed, follow it with `transcribe_status` first.
+2. Ask whether they want you to look up the attendees, then call `get_meeting_participants` with `confirm: true`. It returns the names heard in the meeting, and email addresses only if their calendar invite or an earlier shared summary holds them.
+3. If an attendee has no address, ask the person for it. Never guess an address, and never take one from the transcript.
+4. **Scriptivox's own summary:** show the person the exact recipient list, and once they say yes, call `send_meeting_summary` with those addresses and `confirm: true`. Each person gets the meeting summary and a link to the meeting's shared page, once. Then tell them who received it.
+5. **Your own minutes instead:** draft the email for the person to review, and send it only through their own email app, after they say so.
+6. Do not reuse these addresses for anything else.
 
 ## Rules
 

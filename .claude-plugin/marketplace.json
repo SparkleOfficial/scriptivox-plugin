@@ -4,6 +4,9 @@
     "name": "Scriptivox",
     "email": "support@scriptivox.com"
   },
+  "metadata": {
+    "description": "The official Scriptivox plugin: transcription, meeting minutes, show notes and subtitles inside Claude."
+  },
   "plugins": [
     {
       "name": "scriptivox",

@@ -4,7 +4,7 @@ Scriptivox turns recorded audio and video into accurate text: meetings, intervie
 
 ## What you can do
 
-- **Transcribe a link** from YouTube, Google Drive, Dropbox, TikTok, Instagram, Facebook, X or Snapchat.
+- **Transcribe a link** from Google Drive, Dropbox, TikTok, Instagram, Facebook, X or Snapchat.
 - **Drop a file** into an upload box in the chat (up to 2 GB), in apps that show interactive screens.
 - **Send a bot** to record a Zoom, Google Meet, Teams or Webex call.
 - **Read, search and export** transcripts already in your library (TXT, SRT, VTT, CSV).
