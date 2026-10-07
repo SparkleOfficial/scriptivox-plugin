@@ -38,7 +38,7 @@ Only when the person asks for it:
 2. Ask whether they want you to look up the attendees, then call `get_meeting_participants` with `confirm: true`. It returns the names heard in the meeting, and email addresses only if their calendar invite or an earlier shared summary holds them.
 3. If an attendee has no address, ask the person for it. Never guess an address, and never take one from the transcript.
 4. **Scriptivox's own summary:** show the person the exact recipient list, and once they say yes, call `send_meeting_summary` with those addresses and `confirm: true`. Each person gets the meeting summary and a link to the meeting's shared page, once. Then tell them who received it.
-5. **Your own minutes instead:** draft the email for the person to review, and send it only through their own email app, after they say so.
+5. **Your own minutes instead:** draft the email text in the chat for the person to copy into their own email and send themselves.
 6. Do not reuse these addresses for anything else.
 
 ## Rules
