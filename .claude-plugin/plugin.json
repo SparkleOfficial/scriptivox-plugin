@@ -9,6 +9,7 @@
     "url": "https://www.scriptivox.com"
   },
   "homepage": "https://www.scriptivox.com/docs/mcp",
+  "privacyPolicyUrl": "https://www.scriptivox.com/privacypolicy",
   "repository": "https://github.com/SparkleOfficial/scriptivox-plugin",
   "license": "MIT",
   "keywords": [

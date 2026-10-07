@@ -26,9 +26,13 @@ You sign in to your own Scriptivox account the first time a tool is used. Transc
 
 ## What it connects to and what it sends
 
-The plugin has one connection: the Scriptivox server at `https://platform.scriptivox.com/mcp/directory`. It runs no code on your computer. Links you ask it to transcribe, files you upload in the chat, and meeting links you send a bot to go to Scriptivox for transcription. Transcript text comes back to the chat so the assistant can work with it, so the chat app's own data policy applies to it as well. Scriptivox's handling of your data is described in its privacy policy: https://www.scriptivox.com/privacypolicy
+The plugin has one connection: the Scriptivox server at `https://platform.scriptivox.com/mcp/directory`. It runs no code on your computer. Links you ask it to transcribe, files you upload in the chat, and meeting links you send a bot to go to Scriptivox for transcription. Transcript text comes back to the chat so the assistant can work with it, so the chat app's own data policy applies to it as well. Scriptivox's handling of your data is described in its privacy policy (below).
 
 Meeting bots join calls as a visible participant named after Scriptivox. Tell the other people on the call that it is being recorded.
+
+## Privacy policy
+
+https://www.scriptivox.com/privacypolicy
 
 ## Install
 
