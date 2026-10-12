@@ -12,6 +12,7 @@ Pick the route that matches what the person has:
 - **A link** (Google Drive, Dropbox): call `transcribe_url` with `diarize: true` so speakers are labelled. It returns a `transcription_id` at once.
 - **A file already attached in the chat** (ChatGPT): call `transcribe_file` with that file and `diarize: true`.
 - **A file on their computer**: call `upload_file` with `diarize: true`. An upload box appears in the chat; wait for them to drop the file.
+- **A file on their computer, and you can run terminal commands** (Claude Code, Codex, Cursor): call `upload_link` with the file's path, run the `curl` command it returns, and the transcription starts when the upload finishes (on API credits, call `transcribe_upload` with the `upload_id` afterwards).
 - **A call that has not happened yet**: call `open_meeting_bot`, or `start_meeting_bot` with the meeting link once they confirm (it needs `confirm: true`). The transcript arrives after the call ends; find it later with `search_transcripts`.
 - **Speakers still labelled SPEAKER_00, SPEAKER_01**: work out who is who from the text, confirm with the person, then `rename_speakers` so the minutes and the transcript both carry real names.
 - **A misheard name or term** ("it's Priya, not Prya"): `edit_transcript` with `replace`.

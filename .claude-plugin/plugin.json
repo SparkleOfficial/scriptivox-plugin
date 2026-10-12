@@ -1,8 +1,8 @@
 {
   "name": "scriptivox",
   "displayName": "Scriptivox",
-  "version": "1.0.0",
-  "description": "Transcribe meetings, podcasts and videos with Scriptivox, then write minutes, show notes and subtitles from them. Adds the Scriptivox connector and three skills.",
+  "version": "1.1.0",
+  "description": "Transcribe meetings, podcasts and videos with Scriptivox, then write minutes, show notes, interview and lecture notes, and subtitles in any language from them. Adds the Scriptivox connector and six skills.",
   "author": {
     "name": "Scriptivox",
     "email": "support@scriptivox.com",

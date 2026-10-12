@@ -2,7 +2,7 @@
   "mcpServers": {
     "scriptivox": {
       "type": "http",
-      "url": "https://platform.scriptivox.com/mcp/directory"
+      "url": "https://platform.scriptivox.com/mcp"
     }
   }
 }

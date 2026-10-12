@@ -1,11 +1,11 @@
 # Scriptivox for Claude and ChatGPT
 
-Scriptivox turns recorded audio and video into accurate text: meetings, interviews, lectures, podcasts and videos, in 119 languages, with speaker labels and timestamps. This plugin connects your Scriptivox account to Claude or ChatGPT and adds three skills that turn transcripts into something useful.
+Scriptivox turns recorded audio and video into accurate text: meetings, interviews, lectures, podcasts and videos, in 119 languages, with speaker labels and timestamps. This plugin connects your Scriptivox account to Claude or ChatGPT and adds six skills that turn transcripts into something useful.
 
 ## What you can do
 
-- **Transcribe a link** from Google Drive, Dropbox, TikTok, Instagram, Facebook, X or Snapchat.
-- **Drop a file** into an upload box in the chat (up to 2 GB), in apps that show interactive screens.
+- **Transcribe a link** from Google Drive, Dropbox, OneDrive, SharePoint (including Teams recordings shared with "Anyone with the link"), TikTok, Instagram, Facebook, X or Snapchat, or a direct link to an audio or video file on any public website.
+- **Drop a file** into an upload box in the chat (up to 5 GB), in apps that show interactive screens.
 - **Send a bot** to record a Zoom, Google Meet, Teams or Webex call.
 - **Read, search and export** transcripts already in your library (TXT, SRT, VTT, CSV).
 - **Edit subtitles** in the chat and download SRT or WebVTT.
@@ -17,16 +17,19 @@ Scriptivox turns recorded audio and video into accurate text: meetings, intervie
 | `meeting-minutes` | Summary, decisions, action items with owners and due dates, open questions |
 | `podcast-show-notes` | Title ideas, summary, chapters with timestamps, quotes, things mentioned |
 | `subtitles` | SRT/VTT subtitles, timing fixes, translation with the same timings |
+| `interview-analysis` | Themes, quotes with timestamps, how answers compare across interviews |
+| `lecture-notes` | Study notes: outline, key terms, worked examples, review questions, each with timestamps |
+| `translated-captions` | Subtitles in another language, with every timestamp kept |
 
 In Claude Code, `/scriptivox:transcribe` and `/scriptivox:minutes` run the first steps for you.
 
 ## Account and billing
 
-You sign in to your own Scriptivox account the first time a tool is used. Transcriptions use your Scriptivox plan, with the same minutes and limits as the website. The plugin cannot buy a plan, add credit or create API keys. You can see and disconnect the connection at https://platform.scriptivox.com/keys.
+You sign in to your own Scriptivox account the first time a tool is used. The sign-in page asks what the connection uses: your Scriptivox plan (the same minutes and limits as the website; it cannot buy a plan, add credit or create API keys) or your API credits, and how much it may do. You can see, change and disconnect the connection at https://www.scriptivox.com/account/connections.
 
 ## What it connects to and what it sends
 
-The plugin has one connection: the Scriptivox server at `https://platform.scriptivox.com/mcp/directory`. It runs no code on your computer. Links you ask it to transcribe, files you upload in the chat, and meeting links you send a bot to go to Scriptivox for transcription. Transcript text comes back to the chat so the assistant can work with it, so the chat app's own data policy applies to it as well. Scriptivox's handling of your data is described in its privacy policy (below).
+The plugin has one connection: the Scriptivox server at `https://platform.scriptivox.com/mcp`. It runs no code on your computer. Links you ask it to transcribe, files you upload in the chat, and meeting links you send a bot to go to Scriptivox for transcription. Transcript text comes back to the chat so the assistant can work with it, so the chat app's own data policy applies to it as well. Scriptivox's handling of your data is described in its privacy policy (below).
 
 Meeting bots join calls as a visible participant named after Scriptivox. Tell the other people on the call that it is being recorded.
 
