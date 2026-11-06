@@ -8,7 +8,7 @@ description: Turn a recorded lecture, class, webinar or talk into study notes wi
 ## Get the transcript
 
 - A link (YouTube, Google Drive, Dropbox): `transcribe_url`. Pass `language` when you know it.
-- A file attached in ChatGPT: `transcribe_file`. A file on their computer: `upload_file` (or `upload_link` with its path when you can run terminal commands).
+- A file attached in ChatGPT: `transcribe_file`. A file on their computer: `upload_file` (or `upload_link` with its path when you can run terminal commands; in Claude chat, for a file attached to the message, call `upload_link` with its path and run the command once in your code sandbox; if it fails for any reason, do not retry it: call `upload_file` at once with the file's name as `file_name`).
 - Already in their library: `search_transcripts`, or `find_in_transcripts` by topic.
 - Wait with `transcribe_status` (once a minute at most), then read it all with `get_transcript`, following `next_segment`.
 - Speaker labels are usually unnecessary for a single lecturer; add `diarize: true` for a seminar or a Q&A.

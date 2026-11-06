@@ -9,7 +9,7 @@ description: Write podcast or video show notes — title ideas, a summary, chapt
 
 - **A Google Drive or Dropbox link**: `transcribe_url` with `diarize: true` for interviews (`false` for a solo episode). Pass `language` when you know it.
 - **A file attached in the chat** (ChatGPT): `transcribe_file`, with the same `diarize` choice.
-- **A local file**: `upload_file`, then wait for the person to drop it. If you can run terminal commands (Claude Code, Codex, Cursor), call `upload_link` with its path instead and run the command it returns.
+- **A local file**: `upload_file`, then wait for the person to drop it. If you can run terminal commands (Claude Code, Codex, Cursor), call `upload_link` with its path instead and run the command it returns. In Claude chat, for a file attached to the message, call `upload_link` with its path and run the command once in your code sandbox; if it fails for any reason, do not retry it: call `upload_file` at once with the file's name as `file_name`.
 - **Already transcribed**: `search_transcripts` (by name or date) or `find_in_transcripts` (by what was said).
 
 Check `transcribe_status` about once a minute until `completed`, then read every page of `get_transcript` (`start_segment` → `next_segment`).
