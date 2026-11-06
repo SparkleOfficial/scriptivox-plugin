@@ -29,7 +29,7 @@ Give the person the finished file in a code block they can save as `.srt` or `.v
 
 ## 4. Edit before publishing
 
-In ChatGPT the person can open the file in the Scriptivox subtitle editor (`edit_subtitles` or `open_subtitle_file`) to fix timing and wording.
+The person can open the transcript in the Scriptivox subtitle editor (`edit_subtitles`) to fix timing and wording.
 
 ## Rules
 

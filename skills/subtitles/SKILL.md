@@ -12,8 +12,6 @@ description: Make SRT or WebVTT subtitles for a video with Scriptivox, check and
 3. Open `edit_subtitles` with the `transcription_id`. The person can fix wording and timing there and download SRT or VTT. It also returns the SRT text. For shorter lines on screen, pass `max_words` (8 is a good default; 4–5 for vertical video).
 4. For a file as text instead, `export_transcript` with `format: "srt"` or `"vtt"`.
 
-A `.srt` or `.vtt` file the person already has opens straight in the editor in ChatGPT desktop (`open_subtitle_file`).
-
 ## Translate them
 
 Translate caption by caption, keeping every number and timestamp line exactly as it is:
