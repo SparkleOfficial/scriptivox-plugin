@@ -25,11 +25,11 @@ In Claude Code, `/scriptivox:transcribe` and `/scriptivox:minutes` run the first
 
 ## Account and billing
 
-You sign in to your own Scriptivox account the first time a tool is used. The sign-in page asks what the connection uses: your Scriptivox plan (the same minutes and limits as the website; it cannot buy a plan, add credit or create API keys) or your API credits, and how much it may do. You can see, change and disconnect the connection at https://www.scriptivox.com/account/connections.
+You sign in to your own Scriptivox account when you connect it: in Claude, on the plugin's Connectors tab or in Settings → Connectors; in Claude Code, with `/mcp`. The sign-in page asks what the connection uses: your Scriptivox plan (the same minutes and limits as the website; it cannot buy a plan, add credit or create API keys) or your API credits, and how much it may do. You can see, change and disconnect the connection at https://www.scriptivox.com/account/connections.
 
 ## What it connects to and what it sends
 
-The plugin has one connection: the Scriptivox server at `https://platform.scriptivox.com/mcp`. It runs no code on your computer. Links you ask it to transcribe, files you upload in the chat, and meeting links you send a bot to go to Scriptivox for transcription. Transcript text comes back to the chat so the assistant can work with it, so the chat app's own data policy applies to it as well. Scriptivox's handling of your data is described in its privacy policy (below).
+The plugin has one connection: the Scriptivox server at `https://platform.scriptivox.com/mcp`. In Claude chat, Cowork and ChatGPT it runs no code on your computer. In Claude Code (or another app with a terminal), to send a file from your computer it can ask the assistant to run one `curl` command that uploads that file over HTTPS to Scriptivox's file storage (Supabase, or Amazon S3 for API-credits uploads), at a one-time address the Scriptivox server gives for that file. Nothing is installed and nothing else runs. Links you ask it to transcribe, files you upload in the chat, and meeting links you send a bot to go to Scriptivox for transcription. Transcript text comes back to the chat so the assistant can work with it, so the chat app's own data policy applies to it as well. Scriptivox's handling of your data is described in its privacy policy (below).
 
 Meeting bots join calls as a visible participant named after Scriptivox. Tell the other people on the call that it is being recorded.
 

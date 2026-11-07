@@ -1,7 +1,7 @@
 {
   "name": "scriptivox",
   "displayName": "Scriptivox",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Transcribe meetings, podcasts and videos with Scriptivox, then write minutes, show notes, interview and lecture notes, and subtitles in any language from them. Adds the Scriptivox connector and six skills.",
   "author": {
     "name": "Scriptivox",
@@ -9,7 +9,11 @@
     "url": "https://www.scriptivox.com"
   },
   "homepage": "https://www.scriptivox.com/docs/mcp",
+  "icon": "./icon.png",
+  "documentationUrl": "https://www.scriptivox.com/docs/mcp",
+  "supportUrl": "https://www.scriptivox.com/contact",
   "privacyPolicyUrl": "https://www.scriptivox.com/privacypolicy",
+  "termsOfServiceUrl": "https://www.scriptivox.com/termsofuse",
   "repository": "https://github.com/SparkleOfficial/scriptivox-plugin",
   "license": "MIT",
   "keywords": [

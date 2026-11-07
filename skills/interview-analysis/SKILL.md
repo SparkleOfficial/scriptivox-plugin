@@ -7,7 +7,7 @@ description: Analyse recorded interviews (user research, hiring, journalism, cus
 
 ## Get the transcripts
 
-- **Recordings**: transcribe each with `diarize: true` so the interviewer and the interviewee are told apart — `transcribe_url` for a link, `transcribe_file` for a file attached in ChatGPT, `upload_file` for a file on their computer (or `upload_link` with its path when you can run terminal commands; in Claude chat, for a file attached to the message, call `upload_link` with its path and run the command once in your code sandbox; if it fails for any reason, do not retry it: call `upload_file` at once with the file's name as `file_name`).
+- **Recordings**: transcribe each with `diarize: true` so the interviewer and the interviewee are told apart — `transcribe_url` for a link, `transcribe_file` for a file attached in ChatGPT, `upload_file` for a file on their computer (or `upload_link` with its path when you can run terminal commands; in Claude chat, for a file attached to the message, call `upload_file` at once with the file's name as `file_name`, not `upload_link` or your code sandbox).
 - **Already in their library**: `search_transcripts` by name or date; `find_in_transcripts` when they describe what was said ("the interviews where people mentioned onboarding").
 - Wait with `transcribe_status` (once a minute at most), then read each with `get_transcript`, following `next_segment` until the end.
 - Ask who the interviewer is, then `rename_speakers` so quotes carry real labels ("Interviewer", "P3", or names the person gives you).
