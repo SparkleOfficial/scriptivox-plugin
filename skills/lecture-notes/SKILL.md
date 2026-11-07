@@ -7,7 +7,7 @@ description: Turn a recorded lecture, class, webinar or talk into study notes wi
 
 ## Get the transcript
 
-- A link (YouTube, Google Drive, Dropbox): `transcribe_url`. Pass `language` when you know it.
+- A link (Google Drive, Dropbox, OneDrive, or a direct link to the audio or video file): `transcribe_url`. Pass `language` when you know it. Scriptivox does not transcribe YouTube links: for one, say so and offer to transcribe the recording from a file instead (`upload_file`).
 - A file attached in ChatGPT: `transcribe_file`. A file on their computer: `upload_file` (or `upload_link` with its path when you can run terminal commands; in Claude chat, for a file attached to the message, call `upload_file` at once with the file's name as `file_name`, not `upload_link` or your code sandbox).
 - Already in their library: `search_transcripts`, or `find_in_transcripts` by topic.
 - Wait with `transcribe_status` (once a minute at most), then read it all with `get_transcript`, following `next_segment`.
