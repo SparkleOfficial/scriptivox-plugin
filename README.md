@@ -7,8 +7,11 @@ Scriptivox turns recorded audio and video into accurate text: meetings, intervie
 - **Transcribe a link** from Google Drive, Dropbox, OneDrive, SharePoint (including Teams recordings shared with "Anyone with the link"), TikTok, Instagram, Facebook, X or Snapchat, or a direct link to an audio or video file on any public website.
 - **Drop a file** into an upload box in the chat (up to 5 GB), in apps that show interactive screens.
 - **Send a bot** to record a Zoom, Google Meet, Teams or Webex call.
-- **Read, search and export** transcripts already in your library (TXT, SRT, VTT, CSV).
+- **Read, search and export** transcripts already in your library: PDF, Word, TXT, CSV, SRT or VTT, several at once as one ZIP, with the website's export options (words, characters and seconds per caption, timestamps, speakers).
+- **Organise your library**: create, rename and delete folders and workspaces, tag transcripts, and delete transcripts. Deleted transcripts go to the website's Trash, where only you can restore them; the assistant cannot see or empty Trash. Deleting a folder, a workspace or several transcripts at once needs your yes in the chat first.
+- **Your calendar's meetings**: if you connected a calendar on the website, see your upcoming meetings and turn the recording bot on or off for any of them, or for all ("record all meetings", after your yes). Connecting or disconnecting a calendar is only done on the website.
 - **Edit subtitles** in the chat and download SRT or WebVTT.
+- **Run your automations** (Claude): list and run the automations you built on the website. Creating and editing them stays on the website.
 
 ## Skills
 

@@ -26,7 +26,7 @@ In the language of the lecture:
 ## Subtitles or a handout
 
 - Captions for the recording: `export_transcript` with `srt` or `vtt`.
-- Plain text to print: `export_transcript` with `text`. Word and PDF downloads are on the website: the transcript's page at https://www.scriptivox.com.
+- A handout to print: `export_transcript` with `pdf` or `docx` (Word); the chat shows a download card the person saves from. Plain text: `txt`. Several formats at once come as one ZIP.
 
 ## Rules
 

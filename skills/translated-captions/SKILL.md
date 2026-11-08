@@ -14,7 +14,7 @@ Transcribe first, in the language actually spoken — not the target language. P
 
 ## 2. Get the captions
 
-`export_transcript` with `format: "srt"` (or `"vtt"` for the web). For readable captions keep the defaults, or set `max_chars` around 42 and `max_duration` around 6 seconds.
+`export_transcript` with `srt` (or `vtt` for the web). For readable captions keep the defaults, or set `max_chars` around 42 and `max_duration` around 6 seconds.
 
 ## 3. Translate
 
