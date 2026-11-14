@@ -12,7 +12,7 @@ description: Write podcast or video show notes — title ideas, a summary, chapt
 - **A local file**: `upload_file`, then wait for the person to drop it. If you can run terminal commands (Claude Code, Codex, Cursor), call `upload_link` with its path instead and run the command it returns. In Claude chat, for a file attached to the message, call `upload_file` at once with the file's name as `file_name`, not `upload_link` or your code sandbox.
 - **Already transcribed**: `search_transcripts` (by name or date) or `find_in_transcripts` (by what was said).
 
-Check `transcribe_status` about once a minute until `completed`, then read every page of `get_transcript` (`start_segment` → `next_segment`).
+The progress card in the chat says when it is ready; where none shows, call `transcribe_status` with `wait_seconds: 25` rather than checking in a quick loop. When it is `completed`, read every page of `get_transcript` (`start_segment` → `next_segment`).
 
 ## Write the notes
 

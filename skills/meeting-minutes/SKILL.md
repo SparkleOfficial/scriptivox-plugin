@@ -9,18 +9,19 @@ description: Turn a recorded meeting into minutes — summary, decisions, and ac
 
 Pick the route that matches what the person has:
 
-- **A link** (Google Drive, Dropbox): call `transcribe_url` with `diarize: true` so speakers are labelled. It returns a `transcription_id` at once.
+- **A link** (Google Drive, Dropbox, OneDrive, SharePoint, or a direct link to the audio or video file): call `transcribe_url` with `diarize: true` so speakers are labelled. It returns a `transcription_id` at once.
 - **A file already attached in the chat** (ChatGPT): call `transcribe_file` with that file and `diarize: true`.
 - **A file on their computer**: call `upload_file` with `diarize: true`. An upload box appears in the chat; wait for them to drop the file.
 - **A file on their computer, and you can run terminal commands** (Claude Code, Codex, Cursor): call `upload_link` with the file's path, run the `curl` command it returns, then call `start_transcription` with the `transcription_id` it gave you: nothing is transcribed until then (on API credits, call `transcribe_upload` with the `upload_id`).
 - **A file attached in Claude chat**: call `upload_file` at once with `diarize: true` and the file's name as `file_name`; the box asks the person to pick that file. Do not use `upload_link` or your code sandbox for it.
-- **A call that has not happened yet**: call `open_meeting_bot`, or `start_meeting_bot` with the meeting link once they confirm (it needs `confirm: true`). The transcript arrives after the call ends; find it later with `search_transcripts`.
-- **A call on their connected calendar**: `list_calendar_meetings` shows the upcoming ones and whether the bot will join; `set_meeting_recording` turns the bot on or off for one meeting (for several at once, ask first and pass `confirm: true`). If no calendar is connected, tell them to connect it on the Scriptivox website (Settings, Calendar); that step is only done there.
+- **A call that has not happened yet**: call `open_meeting_bot` to show the booking form, or `start_meeting_bot` with the meeting link once they confirm (it needs `confirm: true`). A start time must include its time zone (for example `2026-11-20T15:00:00-05:00`). It takes the website's booking settings: `title`, `language`, `bot_name` (a Pro feature), `keep_video`, `join_message` and `folder`. For several meetings, call it once per meeting after they agree to the list. The transcript arrives after the call ends; find it later with `search_transcripts`.
+- **A call on their connected calendar**: `list_calendar_meetings` shows the upcoming ones and whether the bot will join; `set_meeting_recording` turns the bot on or off for one meeting (for several at once, ask first and pass `confirm: true`). `read_settings` shows the calendar bot's settings (language, video, join message, who gets the summary email); `update_settings` with `set.calendar` changes them once the person agreed to the change (`confirm: true`). If no calendar is connected, `list_calendar_meetings` says so: connecting one is only done on the Scriptivox website (Settings, Calendar), and `start_meeting_bot` books the meetings they pick in the meantime.
+- **A meeting the Scriptivox bot already recorded**: `get_meeting_summary` reads the summary the website shows for it (purpose, key takeaways, action items with owners and the minute each came up). Start from it, and check owners and dates against the transcript.
 - **Speakers still labelled SPEAKER_00, SPEAKER_01**: work out who is who from the text, confirm with the person, then `rename_speakers` so the minutes and the transcript both carry real names.
 - **A misheard name or term** ("it's Priya, not Prya"): `edit_transcript` with `replace`.
 - **Already in their library**: call `search_transcripts` to find it by name or date, or `find_in_transcripts` when they describe what was said ("the call where we discussed pricing").
 
-While a transcription runs, check `transcribe_status` about once a minute. Do not poll faster. When it is `completed`, read it with `get_transcript`. Long transcripts come in pages: keep calling with `start_segment` set to the `next_segment` it returns until there is none.
+While a transcription runs, the progress card in the chat says when it is ready. Where none shows, call `transcribe_status` with `wait_seconds: 25` (it returns as soon as the job finishes) rather than checking in a quick loop. When it is `completed`, read it with `get_transcript`. Long transcripts come in pages: keep calling with `start_segment` set to the `next_segment` it returns until there is none.
 
 ## Write the minutes
 
@@ -40,9 +41,10 @@ Only when the person asks for it:
 1. A meeting that just ended: find it with `search_transcripts` (source `meeting`, newest first). If it is still being transcribed, follow it with `transcribe_status` first.
 2. Ask whether they want you to look up the attendees, then call `get_meeting_participants` with `confirm: true`. It returns the names heard in the meeting, and email addresses only if their calendar invite or an earlier shared summary holds them.
 3. If an attendee has no address, ask the person for it. Never guess an address, and never take one from the transcript.
-4. **Scriptivox's own summary:** show the person the exact recipient list, and once they say yes, call `send_meeting_summary` with those addresses and `confirm: true`. Each person gets the meeting summary and a link to the meeting's shared page, once. Then tell them who received it.
+4. **Scriptivox's own summary:** show the person the exact recipient list, and once they say yes, call `send_meeting_summary` with those addresses and `confirm: true`. Each person gets the meeting summary and a link to the meeting's shared page, once. An address the meeting has never had also needs the account owner's approval: that call sends nothing and returns a link and an `approval_id`; once they approve, call again with the same arguments plus `approval_id`. Then tell them who received it.
 5. **Your own minutes instead:** draft the email text in the chat for the person to copy into their own email and send themselves.
-6. Do not reuse these addresses for anything else.
+6. **Only the share link:** `open_meeting_share` shows the meeting's share link in a box in the chat, with Copy and Stop sharing, or a button to make one. The link stays in the box, and no link is made or stopped unless the person presses a button there.
+7. Do not reuse these addresses for anything else.
 
 ## Rules
 

@@ -10,7 +10,7 @@ description: Make subtitles in another language for a video with Scriptivox — 
 Transcribe first, in the language actually spoken — not the target language. Pass `language` for the spoken language when you know it; auto-detection on a short or noisy clip can guess wrong.
 
 - A link: `transcribe_url`. A file attached in ChatGPT: `transcribe_file`. A file on their computer: `upload_file` (or `upload_link` with its path when you can run terminal commands; in Claude chat, for a file attached to the message, call `upload_file` at once with the file's name as `file_name`, not `upload_link` or your code sandbox).
-- Wait with `transcribe_status` (once a minute at most).
+- The progress card in the chat says when it is ready; where none shows, call `transcribe_status` with `wait_seconds: 25` rather than checking in a quick loop.
 
 ## 2. Get the captions
 
