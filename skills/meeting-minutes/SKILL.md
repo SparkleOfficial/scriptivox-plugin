@@ -9,7 +9,7 @@ description: Turn a recorded meeting into minutes — summary, decisions, and ac
 
 Pick the route that matches what the person has:
 
-- **A link** (Google Drive, Dropbox, OneDrive, SharePoint, or a direct link to the audio or video file): call `transcribe_url` with `diarize: true` so speakers are labelled. It returns a `transcription_id` at once.
+- **A link** (Google Drive, Dropbox, OneDrive, SharePoint, or a direct link to the audio or video file): call `transcribe_url` with `diarize: true` so speakers are labelled. In Claude, on a Scriptivox plan connection, the answer brings the transcript itself when the job ends within about two minutes; otherwise it returns a `transcription_id` to wait on (below).
 - **A file already attached in the chat** (ChatGPT): call `transcribe_file` with that file and `diarize: true`.
 - **A file on their computer**: call `upload_file` with `diarize: true`. An upload box appears in the chat; wait for them to drop the file.
 - **A file on their computer, and you can run terminal commands** (Claude Code, Codex, Cursor): call `upload_link` with the file's path, run the `curl` command it returns, then call `start_transcription` with the `transcription_id` it gave you: nothing is transcribed until then (on API credits, call `transcribe_upload` with the `upload_id`).
