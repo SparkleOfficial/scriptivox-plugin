@@ -4,7 +4,7 @@
   "displayName": "Scriptivox",
   "version": "1.2.1",
   "description": "Transcribe meetings, interviews, podcasts and videos in 119 languages, then write minutes, show notes and subtitles from the transcripts.",
-  "logo": ".antigravity-plugin/logo.svg",
+  "logo": "antigravity/logo.svg",
   "suggestedPrompts": [
     "Transcribe this recording and write meeting minutes with action items",
     "Turn my latest podcast episode into show notes with chapters",
