@@ -1,0 +1,27 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "scriptivox",
+  "displayName": "Scriptivox",
+  "version": "1.2.1",
+  "description": "Transcribe meetings, interviews, podcasts and videos in 119 languages, then write minutes, show notes and subtitles from the transcripts.",
+  "logo": ".antigravity-plugin/logo.svg",
+  "suggestedPrompts": [
+    "Transcribe this recording and write meeting minutes with action items",
+    "Turn my latest podcast episode into show notes with chapters",
+    "Create SRT subtitles from my most recent transcript"
+  ],
+  "author": {
+    "name": "Scriptivox",
+    "url": "https://www.scriptivox.com"
+  },
+  "homepage": "https://www.scriptivox.com/docs/mcp",
+  "repository": "https://github.com/SparkleOfficial/scriptivox-plugin",
+  "license": "MIT",
+  "keywords": [
+    "transcription",
+    "meetings",
+    "podcast",
+    "subtitles",
+    "speech-to-text"
+  ]
+}
