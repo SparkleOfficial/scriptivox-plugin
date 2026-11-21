@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "scriptivox",
+  "version": "1.2.1",
+  "description": "Transcribe meetings, podcasts and videos with Scriptivox, then write minutes, show notes and subtitles from them.",
+  "author": {
+    "name": "Scriptivox",
+    "email": "support@scriptivox.com",
+    "url": "https://www.scriptivox.com"
+  },
+  "homepage": "https://www.scriptivox.com/docs/mcp",
+  "repository": "https://github.com/SparkleOfficial/scriptivox-plugin",
+  "license": "MIT",
+  "keywords": [
+    "transcription",
+    "meetings",
+    "podcast",
+    "subtitles",
+    "speech-to-text"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "scriptivox",
+  "description": "Transcribe meetings, podcasts and videos with Scriptivox, then write minutes, show notes and subtitles from them.",
+  "version": "1.2.1",
+  "author": {
+    "name": "Scriptivox",
+    "email": "support@scriptivox.com"
+  },
+  "homepage": "https://www.scriptivox.com/docs/mcp",
+  "repository": "https://github.com/SparkleOfficial/scriptivox-plugin",
+  "license": "MIT",
+  "keywords": [
+    "transcription",
+    "meetings",
+    "podcast",
+    "subtitles",
+    "speech-to-text"
+  ],
+  "logo": "icon.png",
+  "skills": "skills",
+  "commands": "commands",
+  "mcpServers": {
+    "scriptivox": {
+      "url": "https://platform.scriptivox.com/mcp"
+    }
+  }
+}

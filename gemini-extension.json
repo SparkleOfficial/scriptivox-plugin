@@ -1,0 +1,10 @@
+{
+  "name": "scriptivox",
+  "version": "1.2.1",
+  "description": "Transcribe meetings, podcasts and videos with Scriptivox, then write minutes, show notes and subtitles from them.",
+  "mcpServers": {
+    "scriptivox": {
+      "httpUrl": "https://platform.scriptivox.com/mcp"
+    }
+  }
+}
