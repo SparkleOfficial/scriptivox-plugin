@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "scriptivox",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Transcribe meetings, podcasts and videos with Scriptivox, then write minutes, show notes and subtitles from them.",
   "author": {
     "name": "Scriptivox",

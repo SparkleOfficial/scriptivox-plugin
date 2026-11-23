@@ -27,6 +27,7 @@ Scriptivox turns recorded audio and video into accurate text: meetings, intervie
 | `interview-analysis` | Themes, quotes with timestamps, how answers compare across interviews |
 | `lecture-notes` | Study notes: outline, key terms, worked examples, review questions, each with timestamps |
 | `translated-captions` | Subtitles in another language, with every timestamp kept |
+| `upload-from-computer` | Nothing: it sends a recording from your computer to Scriptivox in Claude Code and other apps with a terminal |
 
 In Claude Code, `/scriptivox:transcribe` and `/scriptivox:minutes` run the first steps for you.
 
@@ -36,7 +37,7 @@ You sign in to your own Scriptivox account when you connect it: in Claude, on th
 
 ## What it connects to and what it sends
 
-The plugin has one connection: the Scriptivox server at `https://platform.scriptivox.com/mcp`. In Claude chat, Cowork and ChatGPT it runs no code on your computer. In Claude Code (or another app with a terminal), to send a file from your computer it can ask the assistant to run one `curl` command that uploads that file over HTTPS to Scriptivox's file storage (on a plan connection, `cloud.scriptivox.com`), at a one-time address the Scriptivox server gives for that file. Nothing is installed and nothing else runs. Links you ask it to transcribe, files you upload in the chat, and meeting links you send a bot to go to Scriptivox for transcription. Transcript text comes back to the chat so the assistant can work with it, so the chat app's own data policy applies to it as well. Scriptivox's handling of your data is described in its privacy policy (below).
+The plugin has one connection: the Scriptivox server at `https://platform.scriptivox.com/mcp`. In Claude chat, Cowork and ChatGPT it runs no code on your computer. In Claude Code (or another app with a terminal), to send a file from your computer the `upload-from-computer` skill has the assistant run one `curl` command, written out in that skill, that uploads that file over HTTPS to Scriptivox's file storage (on a plan connection, `cloud.scriptivox.com`), at a one-time address the Scriptivox server gives for that file. The server supplies only that address. Nothing is installed and nothing else runs. Links you ask it to transcribe, files you upload in the chat, and meeting links you send a bot to go to Scriptivox for transcription. Transcript text comes back to the chat so the assistant can work with it, so the chat app's own data policy applies to it as well. Scriptivox's handling of your data is described in its privacy policy (below).
 
 Meeting bots join calls as a visible participant named after Scriptivox. Tell the other people on the call that it is being recorded.
 

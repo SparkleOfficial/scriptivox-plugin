@@ -2,7 +2,7 @@
   "$schema": "https://antigravity.google/schemas/v1/plugin.json",
   "name": "scriptivox",
   "displayName": "Scriptivox",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Transcribe meetings, interviews, podcasts and videos in 119 languages, then write minutes, show notes and subtitles from the transcripts.",
   "logo": "icon.png",
   "suggestedPrompts": [

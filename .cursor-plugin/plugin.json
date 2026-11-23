@@ -1,7 +1,7 @@
 {
   "name": "scriptivox",
   "description": "Transcribe meetings, podcasts and videos with Scriptivox, then write minutes, show notes and subtitles from them.",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": {
     "name": "Scriptivox",
     "email": "support@scriptivox.com"
